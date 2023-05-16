@@ -1,0 +1,13 @@
+{
+  "name": "budgie",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Cute little budget projection app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Will Scott<willscott.dev@gmail.com>",
+  "license": "ISC"
+}
