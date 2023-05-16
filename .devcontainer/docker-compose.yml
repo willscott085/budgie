@@ -12,7 +12,7 @@ services:
       - ./.zshrc:/home/vscode/.zshrc
 
     environment:
-      GITHUB_NPM_TOKEN: "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"
+      GITHUB_NPM_TOKEN: ""
 
     entrypoint: /usr/local/share/docker-init.sh
     command: sleep infinity
