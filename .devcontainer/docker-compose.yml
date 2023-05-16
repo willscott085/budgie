@@ -2,25 +2,18 @@ version: '3'
 
 services:
   app:
-    build: 
+    build:
       context: .
       dockerfile: Dockerfile
 
     volumes:
-      # Forwards the local Docker socket to the container.
-      - /var/run/docker.sock:/var/run/docker-host.sock 
-      # Update this to wherever you want VS Code to mount the folder of your project
+      - /var/run/docker.sock:/var/run/docker-host.sock
       - ../..:/workspaces:cached
+      - ./.zshrc:/home/vscode/.zshrc
 
-    # Overrides default command so things don't shut down after the process ends.
+    environment:
+      GITHUB_NPM_TOKEN: "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"
+
     entrypoint: /usr/local/share/docker-init.sh
-    command: sleep infinity 
-
-    # Uncomment the next four lines if you will use a ptrace-based debuggers like C++, Go, and Rust.
-    # cap_add:
-    #  - SYS_PTRACE
-    # security_opt:
-    #   - seccomp:unconfined
-
-    # Use "forwardPorts" in **devcontainer.json** to forward an app port locally. 
-    # (Adding the "ports" property to this file will not forward from a Codespace.)
+    command: sleep infinity
+    user: vscode
