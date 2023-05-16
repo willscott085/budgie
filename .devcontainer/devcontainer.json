@@ -22,6 +22,7 @@
 				"esbenp.prettier-vscode",
 				"bradlc.vscode-tailwindcss",
 				"snyk-security.snyk-vulnerability-scanner",
+				"Prisma.prisma"
 			],
 			"settings": {
 				"terminal.integrated.defaultProfile.linux": "zsh",
@@ -36,6 +37,6 @@
 	"forwardPorts": [
 		3000
 	],
-	"postCreateCommand": "pnpm install && pnpm run dev",
+	"postCreateCommand": "pnpm install",
 	"remoteUser": "vscode"
 }

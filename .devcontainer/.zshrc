@@ -95,3 +95,4 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias ..="cd .."
+alias clear="rm -rf node_modules .next"
